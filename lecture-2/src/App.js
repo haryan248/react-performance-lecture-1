@@ -17,11 +17,17 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     LazyImageModal.preload();
+
+    const img = new Image();
+    img.src =
+      "https://stillmed.olympic.org/media/Photos/2016/08/20/part-1/20-08-2016-Football-Men-01.jpg?interpolation=lanczos-none&resize=*:800";
   }, []);
+
   // mouseHover 되었을때
   const handleMouseEnter = () => {
     LazyImageModal.preload();
   };
+
   return (
     <div className="App">
       <Header />
